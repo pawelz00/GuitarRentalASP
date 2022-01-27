@@ -1,9 +1,9 @@
 # GuitarRentalASP
-Aplikacja symulująca wypożyczalnię gitar
-AspNetCoreMvc/EntityFramework/Identity/REST API/xUnit
-INSTRUKCJA:
-Database=.
-1.W menadżerze pakietów wpisać:
-update-database -Context AppDbContext
-update-database -Context AppIdentityDbContext
-2.Uruchomić IIS Express
+Aplikacja symulująca wypożyczalnię gitar <br>
+AspNetCoreMvc/EntityFramework/Identity/REST API/xUnit <br>
+INSTRUKCJA: <br>
+Database=. <br>
+1.W menadżerze pakietów wpisać: <br>
+update-database -Context AppDbContext <br>
+update-database -Context AppIdentityDbContext <br>
+2.Uruchomić IIS Express <br>
