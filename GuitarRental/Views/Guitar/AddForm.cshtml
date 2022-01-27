@@ -1,0 +1,30 @@
+﻿@model GuitarRental.Models.Guitar
+@{
+}
+
+<div class="container-fluid">
+    <h1>Wpisz dane gitary</h1>
+    <form asp-action="Add" asp-controller="Guitar" method="POST">
+        <div class="mb-3">
+            <span style="color:red;" asp-validation-for="Name"></span>
+            <input class="form-control" asp-for="Name" placeholder="Nazwa" />
+        </div>
+        <div class="mb-3">
+            <span style="color:red;" asp-validation-for="GuitarTypeId"></span>
+            <span style="color:dodgerblue;">[1=Klasyczna, 2=Elektryczna, 3=Akustyczna]</span>
+            <input class="form-control" asp-for="GuitarTypeId" placeholder="Typ" />
+        </div>
+        <div class="mb-3">
+            <span style="color:red;" asp-validation-for="GuitarStringsId"></span>
+            <span style="color:dodgerblue;">[1=Nylonowe, 2=Stalowe]</span>
+            <input class="form-control" asp-for="GuitarStringsId" placeholder="Rodzaj strun" />
+        </div>
+        <div class="mb-3">
+            <span style="color:red;" asp-validation-for="ProductionYear"></span>
+            <input class="form-control" asp-for="ProductionYear" placeholder="Rok produkcji" />
+        </div>
+        <div class="mb-3">
+            <button type="submit">Dodaj</button>
+        </div>
+    </form>
+</div>

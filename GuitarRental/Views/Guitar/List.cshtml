@@ -1,0 +1,48 @@
+﻿@model IEnumerable<GuitarRental.Models.Guitar>
+
+    @{
+    ViewData["Title"] = "List";
+    }
+
+    <h1>Lista gitar</h1>
+
+    <p>
+        <a asp-action="AddForm" asp-controller="Guitar">Dodaj nową gitarę</a>
+    </p>
+    <table class="table table-light table-hover table-bordered">
+        <thead>
+            <tr class="table-info">
+                <th>
+                    Nazwa
+                </th>
+                <th>
+                    Typ gitary
+                    [1=Klasyczna, 2=Elektryczna, 3=Akustyczna]
+                </th>
+                <th>
+                    Rok produkcji
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GuitarTypeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductionYear)
+                </td>
+                <td>
+                    <a style="color: #000; text-decoration: underline;" asp-action="Edit" asp-route-id="@item.GuitarId">Edytuj</a> |
+                    <a style="color: #000; text-decoration: underline;" asp-action="Details" asp-route-id="@item.GuitarId">Szczegóły</a> |
+                    <a style="color: #000; text-decoration: underline;" asp-action="Delete" asp-route-id="@item.GuitarId">Wypożycz (usuń)</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>

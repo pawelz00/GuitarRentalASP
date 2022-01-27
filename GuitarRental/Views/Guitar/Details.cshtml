@@ -1,0 +1,43 @@
+﻿@model GuitarRental.Models.Guitar
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Szczegóły gitary</h1>
+<br>
+<div>
+    <h4>Gitara:  @Model.Name</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nazwa
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Struny
+        </dt>
+        <dd class="col-sm-10">
+            <span style="color:dodgerblue;">[1=Nylonowe, 2=Stalowe]</span> <br>
+            @Html.DisplayFor(model => model.GuitarStringsId)
+        </dd>
+        <dt class="col-sm-2">
+            Typ
+        </dt>
+        <dd class="col-sm-10">
+            <span style="color:dodgerblue;">[1=Klasyczna, 2=Elektryczna, 3=Akustyczna]</span> <br>
+            @Html.DisplayFor(model => model.GuitarTypeId)
+        </dd>
+        <dt class="col-sm-2">
+            Rok produkcji
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductionYear)
+        </dd>
+    </dl>
+</div>
+<div>
+    <h3><a asp-action="List" asp-controller="Guitar">Wróć na listę</a></h3>
+</div>

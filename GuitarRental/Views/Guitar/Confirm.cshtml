@@ -1,0 +1,8 @@
+﻿@model GuitarRental.Models.Guitar
+
+<h1>Dodałeś gitarę!</h1>
+<h3>Nazwa: @Model.Name</h3>
+<h3>Rok produkcji: @Model.ProductionYear</h3>
+<h3>Struny: @Model.GuitarStringsId</h3>
+<h3>Typ: @Model.GuitarTypeId</h3>
+<a asp-action="Index" asp-controller="Guitar">Powrót do strony głównej</a>

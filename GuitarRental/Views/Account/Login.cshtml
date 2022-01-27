@@ -1,0 +1,21 @@
+﻿@model GuitarRental.Models.LoginModel
+
+<form asp-action="Login" asp-controller="Account" method="POST">
+    <div class="mb-3">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input class="form-control" placeholder="Twoja nazwa użytkownika" asp-for="Name" />
+    </div>
+    <div class="mb-3">
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <input class="form-control" placeholder="Twoje hasło" asp-for="Password" />
+    </div>
+    <input asp-for="ReturnURL" hidden />
+
+    <div class="mb-3">
+        <button type="submit">Login</button>
+    </div>
+</form>
+
+<p class="h-25">Konto admina: </p>
+<p class="h-25">Login: Admin</p>
+<p class="h-25">Hasło: Secret123$</p>
