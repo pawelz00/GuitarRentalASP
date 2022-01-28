@@ -38,12 +38,13 @@ namespace ASPNETtestprojectControllers
         {
             return View(guitars.FindAll());
         }
-
+        [Authorize]
         public IActionResult Details(int id)
         {
             return View(guitars.FindById(id));
         }
         [HttpPost]
+        [Authorize]
         public IActionResult Add(Guitar guitar)
         {
             if (ModelState.IsValid)
@@ -53,11 +54,13 @@ namespace ASPNETtestprojectControllers
             }
             return View("AddForm");
         }
+        [Authorize]
         public IActionResult Edit(int id)
         {
             return View(guitars.FindById(id));
         }
         [HttpPost]
+        [Authorize]
         public IActionResult Edit(Guitar guitar)
         {
             if (ModelState.IsValid)
@@ -67,6 +70,7 @@ namespace ASPNETtestprojectControllers
             }
             return View();
         }
+        [Authorize]
         public IActionResult Delete(int id)
         {
             guitars.Delete(id);
@@ -76,7 +80,7 @@ namespace ASPNETtestprojectControllers
         {
             return View("List", guitars.FindById(id));
         }
-
+        [Authorize]
         public IActionResult Update(Guitar guitar)
         {
             if (ModelState.IsValid)
